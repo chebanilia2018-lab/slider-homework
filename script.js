@@ -24,7 +24,7 @@ let baseOffset = 0;
 
 setupSlider();
 
-/* ---------- INIT ---------- */
+
 
 function setupSlider() {
   addImages();
@@ -33,7 +33,7 @@ function setupSlider() {
   addEvents();
 }
 
-/* ---------- EVENTS ---------- */
+
 
 function addEvents() {
   btnLeft.addEventListener('click', prevSlide);
@@ -52,7 +52,7 @@ function addEvents() {
   track.addEventListener('touchend', onTouchEnd);
 }
 
-/* ---------- CREATE ---------- */
+
 
 function addImages() {
   let html = '';
@@ -77,7 +77,7 @@ function addDots() {
   });
 }
 
-/* ---------- NAVIGATION ---------- */
+
 
 function prevSlide() {
   position--;
@@ -113,14 +113,14 @@ function jump(index) {
   track.classList.add('slide-anim');
 }
 
-/* ---------- DOTS ---------- */
+
 
 function highlightDot(i) {
   dots.forEach(d => d.classList.remove('active'));
   dots[i].classList.add('active');
 }
 
-/* ---------- AUTOPLAY ---------- */
+
 
 function startAuto() {
   if (!timer) {
@@ -133,7 +133,7 @@ function stopAuto() {
   timer = null;
 }
 
-/* ---------- TOUCH ---------- */
+
 
 function onTouchStart(e) {
   touchX = e.touches[0].clientX;
